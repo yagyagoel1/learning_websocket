@@ -2,6 +2,9 @@ import express from "express";
 import { WebSocketServer } from "ws";
 
 const app = express();
+app.get("/", (req, res) => {
+  res.send("hello from express");
+});
 const server = app.listen(8080, () => {
   console.log("running on 8080");
 });
